@@ -1,0 +1,21 @@
+{
+    "name": "desinova/aero",
+    "description": "Un micro-framework PHP hybride et ultra-léger.",
+    "type": "project",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Desinova\\Aero\\": "core/",
+            "Desinova\\Aero\\Relations\\": "core/Relations/",
+            "App\\": "includes/"
+        },
+        "files": [
+            "core/helpers.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.0",
+        "green-api/whatsapp-api-client-php": "^0.3.7",
+        "phpmailer/phpmailer": "^7.1"
+    }
+}

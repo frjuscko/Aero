@@ -1,0 +1,11 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Sécurité : Interdire l'accès direct aux dossiers système par l'URL
+RewriteRule ^(core|config|includes|pages|cache)($|/) - [F,L]
+
+# Routage universel : Si l'URL demandée n'est pas un fichier ou dossier réel, on passe tout à index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
